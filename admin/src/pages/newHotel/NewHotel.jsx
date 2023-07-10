@@ -108,20 +108,7 @@ const NewHotel = () => {
                   <option value={false}>No</option>
                   <option value={true}>Yes</option>
                 </select>
-              </div>
-              <div className="selectRooms">
-                <label>Rooms</label>
-                <select id="rooms" multiple onChange={handleSelect}>
-                  {loading
-                    ? "loading"
-                    : data &&
-                      data.map((room) => (
-                        <option key={room._id} value={room._id}>
-                          {room.title}
-                        </option>
-                      ))}
-                </select>
-              </div>
+              </div>               
               <button onClick={handleClick}>Send</button>
             </form>
           </div>

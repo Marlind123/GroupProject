@@ -12,6 +12,7 @@ const useFetch = (url) => {
     try {
       const res = await axios.get(`http://localhost:8800/api/${url}`, { withCredentials: true }, { Headers: { "Access-Control-Allow-Origin": "*" } });
       setData(res.data);
+      console.log(res.data,"res.data")
     } catch (err) {
       setError(err);
     }
@@ -23,13 +24,13 @@ const useFetch = (url) => {
   }, [url]);
 
   const reFetch = async () => {
-    setLoading(true);
-    try {
-      const res = await axios.get(url);
-      setData(res.data);
-    } catch (err) {
-      setError(err);
-    }
+    // setLoading(true);
+    // try {
+    //   const res = await axios.get(url);
+    //   setData(res.data);
+    // } catch (err) {
+    //   setError(err);
+    // }
     setLoading(false);
   };
 

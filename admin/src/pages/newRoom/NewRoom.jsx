@@ -31,7 +31,7 @@ const NewRoom = () => {
     }
   };
 
-  console.log(info)
+  console.log(data,"data")
   return (
     <div className="new">
       <Sidebar />
@@ -61,20 +61,7 @@ const NewRoom = () => {
                   placeholder="give comma between room numbers."
                 />
               </div>
-              <div className="formInput">
-                <label>Choose a hotel</label>
-                <select
-                  id="hotelId"
-                  onChange={(e) => setHotelId(e.target.value)}
-                >
-                  {loading
-                    ? "loading"
-                    : data &&
-                      data.map((hotel) => (
-                        <option key={hotel._id} value={hotel._id}>{hotel.name}</option>
-                      ))}
-                </select>
-              </div>
+              
               <button onClick={handleClick}>Send</button>
             </form>
           </div>

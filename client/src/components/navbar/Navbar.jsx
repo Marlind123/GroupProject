@@ -13,7 +13,7 @@ const Navbar = () => {
         </Link>
         {user ? user.username : (
           <div className="navItems">
-            <button className="navButton">Register</button>
+            <button className="navButton" onClick={()=> navigate("/register")}>Register</button>
             <button className="navButton" onClick={()=>navigate("/login")}>Login</button>
           </div>
         )}
